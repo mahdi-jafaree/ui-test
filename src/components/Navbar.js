@@ -27,24 +27,26 @@ export const Navbar = () => {
 
     return (
         <Grid className={classes.tabsBg} alignItems="stretch" container spacing={0}>
-            {searchMode ?
-                <CSSTransition classNames="search" timeout={200} >
-                    <>
-                        <Grid className={classes.active} xs={2} item ><Home /></Grid>
-                        <Grid className={classes.inActive} xs={2} item ><Home /></Grid>
-                        <Grid className={classes.inActive} xs={2} item ><Home /></Grid>
-                        <Grid className={classes.inActive} item xs={6} >
-                            <TextField onClick={() => setSearchMode(!searchMode)} value="hello" fullWidth ></TextField>
-                        </Grid>
-                    </>
-                </CSSTransition>
-                : <Grid className={classes.inActive} item xs={12} >
-                    <TextField onClick={() => setSearchMode(!searchMode)} value="hello" fullWidth ></TextField>
-                </Grid>
-            }
 
 
 
-        </Grid>
+            <Grid hidden={!searchMode} className={classes.active} xs={2} item ><Home /></Grid>
+            <Grid hidden={!searchMode} className={classes.inActive} xs={2} item ><Home /></Grid>
+            <Grid hidden={!searchMode} className={classes.inActive} xs={2} item ><Home /></Grid>
+            <Grid hidden={!searchMode} className={classes.inActive} item xs={6} >
+                <TextField onClick={() => setSearchMode(!searchMode)} value="hello" fullWidth ></TextField>
+            </Grid>
+
+
+            <Grid style={{ display: !searchMode ? 'flex' : 'none', opacity: !searchMode ? 1 : 0, transition: 'all', transitionDuration: '.5s' }} className={classes.inActive} item xs={12} >
+
+                <TextField onClick={() => setSearchMode(!searchMode)} value="hello" fullWidth ></TextField>
+
+            </Grid>
+
+
+
+
+        </Grid >
     )
 }
