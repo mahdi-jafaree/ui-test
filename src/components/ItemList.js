@@ -27,13 +27,13 @@ export const ItemList = () => {
             </ListItem>
             <Grid style={{ paddingLeft: '5rem' }} container>
                 <Grid style={{ marginRight: '2rem' }} item>
-                    <ThumbUp htmlColor="#999" />
+                    <ThumbUp htmlColor="#999" style={{fontSize:'.8rem'}} />
                 </Grid>
                 <Grid style={{ marginRight: '2rem' }} item>
-                    <Message htmlColor="#999" />
+                    <Message htmlColor="#999" style={{fontSize:'.8rem'}} />
                 </Grid>
                 <Grid style={{ marginRight: '2rem' }} item>
-                    <Share htmlColor="#999" />
+                    <Share htmlColor="#999" style={{fontSize:'.8rem'}} />
                 </Grid>
             </Grid>
             <Divider variant="inset" component="li" />
