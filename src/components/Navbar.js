@@ -22,7 +22,7 @@ const useStles = makeStyles({
     }
 })
 export const Navbar = () => {
-    const [searchMode, setSearchMode] = useState(false)
+    const [searchMode, setSearchMode] = useState(true)
     const classes = useStles()
 
     return (
